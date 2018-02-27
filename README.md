@@ -4,7 +4,7 @@
 
 # Learning Out Line
 
- - What is Kubernetes (purpose, components, architecture)
+ - What is Kubernetes : purpose, [components](CONCEPTS.md), [architecture](CLUSTER-INFO.md)
  - Kubernetes Cluster Setup Options (Local, KOPS, EKS, COTS etc)
  - CI/CD for applications on Kubernetes (AWS code-suite, third-party tools, etc)
  - Identity and access management (IAM for API authentication, IAM for Pods)
