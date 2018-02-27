@@ -1,5 +1,5 @@
 - [Learning Out Line](#learning-out-line)
-- [Project repo](#project-repo)
+- [Project repos](#project-repos)
 - [Resources](#resources)
 
 # Learning Out Line
@@ -10,9 +10,13 @@
  - Identity and access management (IAM for API authentication, IAM for Pods)
  - Cluster Visibility (metrics, logging, application tracing)
 
-# Project repo
+# Project repos
 
 [K8s Demo project](https://github.com/WesleyCharlesBlake/k8s-demo)
+
+[Orchestrating with K8s](https://github.com/WesleyCharlesBlake/k8s-demo/tree/orchestrate-k8s)
+
+[Continous Deployment with K8s](https://github.com/WesleyCharlesBlake/k8s-demo/tree/continuous-deployment-k8s)
 
 # Resources
 
