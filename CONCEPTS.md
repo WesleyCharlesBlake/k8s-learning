@@ -1,13 +1,15 @@
 # Kubernetes Concepts
     
 The Kubernetes Master is a collection of three processes that run on a single node in your cluster, which is designated as the master node. Those processes are: 
-- kube-apiserver 
-- kube-controller-manager 
--  kube-scheduler
+- [kube-apiserver](https://kubernetes.io/docs/reference/generated/kube-apiserver/) 
+- [kube-controller-manager](https://kubernetes.io/docs/reference/generated/kube-controller-manager/)
+- [kube-scheduler](https://kubernetes.io/docs/reference/generated/kube-scheduler/)
 
 Each individual non-master node in your cluster runs two processes:
-- kubelet, which communicates with the Kubernetes Master.
-- kube-proxy, a network proxy which reflects Kubernetes networking services on each node.
+- [kubelet](https://kubernetes.io/docs/reference/generated/kubelet/), which communicates with the Kubernetes Master.
+- [kube-proxy](https://kubernetes.io/docs/reference/generated/kube-proxy/), a network proxy which reflects Kubernetes networking services on each node.
+- [kubelet authentication/authorization](https://kubernetes.io/docs/admin/kubelet-authentication-authorization/)
+
 
 ## Kubernetes Objects
 
