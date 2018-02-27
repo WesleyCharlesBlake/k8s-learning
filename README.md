@@ -1,6 +1,23 @@
 - [Learning Out Line](#learning-out-line)
 - [Project repos](#project-repos)
 - [Resources](#resources)
+    - [Qwik Labs](#qwik-labs)
+
+#Agenda
+- [x] Kubernetes and CKA overview
+- [ ] [Hands On](CLUSTER-SETUP.md) - Cluster -> Deploy Service -> Monitoring
+  - [ ] K8s Cluster Setup 
+  - [ ] Architectural overview
+  - [ ] Best practices
+  - [ ] Real life scenarios
+  - [ ] kubectl
+- [ ] Pods / Services / Deployments / ReplicaSets / DaemonSets / NameSpaces
+- [ ] Ingress Controller / Networking / DNS / Service Mesh
+- [ ] Service Discovery (ETCD/DNS)
+- [ ] Monitoring (Promethues / Heapster / cAdvisor)
+- [ ] Security (RBAC / TLS / Name Spaces)
+- [ ] CI/CD
+- [ ] Cluster Federation (Massive Cluster setup)
 
 # Learning Out Line
 
@@ -23,3 +40,8 @@
 [CKA Cirriculum](https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrator_exam_v1.9.0.pdf)
 
 [walidshaari/Kubernetes-Certified-Administrator](https://github.com/walidshaari/Kubernetes-Certified-Administrator)
+
+## Qwik Labs
+I strongly suggest you go through the [QwikLabs Quest](https://qwiklabs.com/quests/29) on K8s.
+
+

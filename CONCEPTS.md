@@ -4,7 +4,7 @@ The Kubernetes Master is a collection of three processes that run on a single no
 - kube-apiserver 
 - kube-controller-manager 
 -  kube-scheduler
--  
+
 Each individual non-master node in your cluster runs two processes:
 - kubelet, which communicates with the Kubernetes Master.
 - kube-proxy, a network proxy which reflects Kubernetes networking services on each node.
