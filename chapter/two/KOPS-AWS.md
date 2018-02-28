@@ -1,5 +1,20 @@
 # [kops](https://kubernetes.io/docs/getting-started-guides/kops/)
 
+## What is kops?
+
+- Automates the provisioning of Kubernetes clusters in AWS and GCE
+- Deploys [Highly Available](KOPS-AWS-HA.md) (HA) Kubernetes Masters
+- Built on a state-sync model for dry-runs and automatic idempotency
+- Ability to generate Terraform
+- Supports custom Kubernetes add-ons
+- Command line autocompletion
+- YAML Manifest Based API Configuration
+- Templating and dry-run modes for creating Manifests
+- Choose from eight different CNI Networking providers out-of-the-box
+- Supports upgrading from kube-up
+- Capability to add containers, as hooks, and files to nodes via a cluster manifest
+
+
 ## Installing AWS CLI Tools
 
 The officially supported way of installing the tool is with `pip`:
@@ -414,3 +429,5 @@ delete your cluster and everything contained within it!
 ```
 kops delete cluster --name ${NAME} --yes
 ```
+
+

@@ -13,7 +13,6 @@ What we will cover:
 - [kops](KOPS-AWS.md) Presenter: @WesleyCharlesBlake
 - [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) Presenter: @marcossantiago
 - [kube-aws](https://github.com/kubernetes-incubator/kube-aws)  Presenter: @mlungwsr
-- [tectonic](https://coreos.com/tectonic/) Presenter: @WesleyCharlesBlake
 
 ## Pre-requisites:
 kubectl needs to be installed
@@ -48,5 +47,3 @@ wget -O kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
-
-
