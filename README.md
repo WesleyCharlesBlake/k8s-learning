@@ -15,14 +15,11 @@ An indepth guide into Kubernetes, and covering topics for the Certified Kubernet
 
 ### [Chapter Two](chapter/two/README.md)
 
-- [ ] Hands On - Cluster -> Deploy Service -> Monitoring
-- [ ] K8s Cluster Setup
-- [ ] kubectl
-- [ ] Architectural overview
-- [ ] Best practices
-- [ ] Real life scenarios
+- [x] Hands On - Cluster -> Deploy Service -> Monitoring
+- [x] K8s Cluster Setup
 
 ### Chapter Three
+- [ ] kubectl
 - [ ] Pods 
 - [ ] Services 
 - [ ] Deployments 
@@ -58,6 +55,9 @@ An indepth guide into Kubernetes, and covering topics for the Certified Kubernet
 
 ### Chapter Nine
 - [ ] Cluster Federation (Massive Cluster setup)
+- [ ] Architectural overview
+- [ ] Best practices
+- [ ] Real life scenarios
 
 
 # Resources
