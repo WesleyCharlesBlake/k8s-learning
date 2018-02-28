@@ -1,83 +1,57 @@
+# Kubernetes Learning
+An indepth guide into Kubernetes, and covering topics for the Certified Kubernetes Administration certification
 
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter Three](#chapter-three)
-    - [Chapter Four](#chapter-four)
-    - [Chapter Five](#chapter-five)
-    - [Chapter Six](#chapter-six)
-    - [Chapter Seven](#chapter-seven)
-    - [Chapter Eight](#chapter-eight)
-    - [Chapter Nine](#chapter-nine)
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter Three](#chapter-three)
-    - [Chapter Four](#chapter-four)
-    - [Chapter Five](#chapter-five)
-    - [Chapter Six](#chapter-six)
-    - [Chapter Seven](#chapter-seven)
-    - [Chapter Eight](#chapter-eight)
-    - [Chapter Nine](#chapter-nine)
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter Three](#chapter-three)
-    - [Chapter Four](#chapter-four)
-    - [Chapter Five](#chapter-five)
-    - [Chapter Six](#chapter-six)
-    - [Chapter Seven](#chapter-seven)
-    - [Chapter Eight](#chapter-eight)
-    - [Chapter Nine](#chapter-nine)
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter Three](#chapter-three)
-    - [Chapter Four](#chapter-four)
-    - [Chapter Five](#chapter-five)
-    - [Chapter Six](#chapter-six)
-    - [Chapter Seven](#chapter-seven)
-    - [Chapter Eight](#chapter-eight)
-    - [Chapter Nine](#chapter-nine)
-    - [Chapter One](#chapter-one)
-    - [Chapter Two](#chapter-two)
-    - [Chapter Three](#chapter-three)
-    - [Chapter Four](#chapter-four)
-    - [Chapter Five](#chapter-five)
-    - [Chapter Six](#chapter-six)
-    - [Chapter Seven](#chapter-seven)
-    - [Chapter Eight](#chapter-eight)
-    - [Chapter Nine](#chapter-nine)
-- [Learning Out Line](#learning-out-line)
-- [Resources](#resources)
-  - [Qwik Labs](#qwik-labs)
+### Learning Out Line
+ - What is Kubernetes : purpose, [components](chapter/one/README.md), [architecture](chapter/one/CLUSTER-INFO.md)
+ - Kubernetes Cluster Setup Options (Local, KOPS, EKS, COTS etc)
+ - CI/CD for applications on Kubernetes (AWS code-suite, third-party tools, etc)
+ - Identity and access management (IAM for API authentication, IAM for Pods)
+ - Cluster Visibility (metrics, logging, application tracing)
+ 
+## Agenda
 
-#Agenda
-### [Chapter One](chapter/one/)
+### [Chapter One](chapter/one/README.md)
 - [x] Kubernetes and CKA overview
 
-### [Chapter Two](chapter/two/)
+### [Chapter Two](chapter/two/README.md)
 
-- [ ] [Hands On](CLUSTER-SETUP.md) - Cluster -> Deploy Service -> Monitoring
-- [ ] K8s Cluster Setup 
+- [ ] Hands On - Cluster -> Deploy Service -> Monitoring
+- [ ] K8s Cluster Setup
 - [ ] kubectl
 - [ ] Architectural overview
 - [ ] Best practices
 - [ ] Real life scenarios
 
-
 ### Chapter Three
-- [ ] Pods / Services / Deployments / ReplicaSets / DaemonSets / NameSpaces
+- [ ] Pods 
+- [ ] Services 
+- [ ] Deployments 
+- [ ] ReplicaSets 
+- [ ] DaemonSets 
+- [ ] NameSpaces
 
 ### Chapter Four
-- [ ] Ingress Controller / Networking / DNS / Service Mesh
+- [ ] Ingress Controller 
+- [ ] Networking D
+- [ ] DNS
+- [ ] Service Mesh
 
 ### Chapter Five
-- [ ] Service Discovery (ETCD/DNS)
+- [ ] Service Discovery
+- [ ] DNS
+- [ ] etcd (Cluster state)
 
 ### Chapter Six
-- [ ] Monitoring (Promethues / Heapster / cAdvisor)
+- [ ] Monitoring 
+- [ ] Promethues 
+- [ ] Heapster 
+- [ ] cAdvisor
 
 ### Chapter Seven
-- [ ] Security (RBAC / TLS / Name Spaces)
+- [ ] Security 
+- [ ] RBAC 
+- [ ] TLS 
+- [ ] Name Spaces
 
 ### Chapter Eight
 - [ ] CI/CD
@@ -85,15 +59,12 @@
 ### Chapter Nine
 - [ ] Cluster Federation (Massive Cluster setup)
 
-# Learning Out Line
- - What is Kubernetes : purpose, [components](chapter/one/CONCEPTS.md), [architecture](chapter/one/CLUSTER-INFO.md)
- - Kubernetes Cluster Setup Options (Local, KOPS, EKS, COTS etc)
- - CI/CD for applications on Kubernetes (AWS code-suite, third-party tools, etc)
- - Identity and access management (IAM for API authentication, IAM for Pods)
- - Cluster Visibility (metrics, logging, application tracing)
 
 # Resources
+
+## Repos and External resources
 [CKA Cirriculum](https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrator_exam_v1.9.0.pdf)
+
 [K8s Demo project](https://github.com/WesleyCharlesBlake/k8s-demo)
 
 ## Qwik Labs

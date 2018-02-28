@@ -9,7 +9,7 @@ A running Kubernetes cluster contains node agents (kubelet) and a cluster contro
 Kubernetes is a production-grade, open-source platform that orchestrates the placement (scheduling) and execution of application containers within and across computer clusters.
 
 ## Cluster Diagram
-![k8s Cluster](/img/01_cluster.svg)
+![k8s Cluster](../../img/01_cluster.svg)
 
 The *Master* is responsible for managing the cluster. The master coordinates all activities in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.
 
