@@ -39,7 +39,7 @@ An indepth guide into Kubernetes, and covering topics for the Certified Kubernet
 ### Chapter Five
 - [ ] Service Discovery
 - [ ] DNS
-- [ ] [etcd](chapter/two/ETCD-FOR-K8s.md)
+- [ ] [etcd](chapter/five/ETCD-FOR-K8s.md)
 
 ### Chapter Six
 - [ ] Monitoring 
