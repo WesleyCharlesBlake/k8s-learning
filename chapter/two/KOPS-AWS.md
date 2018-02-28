@@ -1,4 +1,4 @@
-# kops
+# [kops](https://kubernetes.io/docs/getting-started-guides/kops/)
 
 ## Installing AWS CLI Tools
 
@@ -39,6 +39,49 @@ Linux
 curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
 chmod +x kops-linux-amd64
 sudo mv kops-linux-amd64 /usr/local/bin/kops
+```
+
+## kops usage:
+```bash
+$ kops
+kops is Kubernetes ops.
+
+kops is the easiest way to get a production grade Kubernetes cluster up and running. We like to think of it as kubectl for clusters.
+
+kops helps you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes clusters from the command line.  AWS (Amazon Web Services) is currently officially supported, with GCE and VMware vSphere in alpha support.
+
+Usage:
+  kops [command]
+
+Available Commands:
+  completion     Output shell completion code for the given shell (bash or zsh).
+  create         Create a resource by command line, filename or stdin.
+  delete         Delete clusters,instancegroups, or secrets.
+  describe       Describe a resource.
+  edit           Edit clusters and other resources.
+  export         Export configuration.
+  get            Get one or many resources.
+  import         Import a cluster.
+  replace        Replace cluster resources.
+  rolling-update Rolling update a cluster.
+  toolbox        Misc infrequently used commands.
+  update         Update a cluster.
+  upgrade        Upgrade a kubernetes cluster.
+  validate       Validate a kops cluster.
+  version        Print the kops version information.
+
+Flags:
+      --alsologtostderr                  log to standard error as well as files
+      --config string                    config file (default is $HOME/.kops.yaml)
+  -h, --help                             help for kops
+      --log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
+      --log_dir string                   If non-empty, write log files in this directory
+      --logtostderr                      log to standard error instead of files (default false)
+      --name string                      Name of cluster
+      --state string                     Location of state storage
+      --stderrthreshold severity         logs at or above this threshold go to stderr (default 2)
+  -v, --v Level                          log level for V logs
+      --vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
 ```
 
 ## Configure DNS
