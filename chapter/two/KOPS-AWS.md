@@ -44,7 +44,7 @@ sudo mv kops-linux-amd64 /usr/local/bin/kops
 ## Configure DNS
 
 Note: If you are using Kops 1.6.2 or later, then DNS configuration is
-optional. Instead, a gossip-based cluster can be easily created. The
+optional. Instead, a [gossip-based cluster](https://github.com/kubernetes/kops/blob/master/docs/development/gossip.md) can be easily created. The
 only requirement to trigger this is to have the cluster name end with
 `.k8s.local`. If a gossip-based cluster is created then you can skip
 this section.
