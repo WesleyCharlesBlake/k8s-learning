@@ -11,14 +11,15 @@
 
 What we will cover:
 - [kops](KOPS-AWS.md) Presenter: @WesleyCharlesBlake
-- [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) Presenter: TBC
-- [kube-aws](https://github.com/kubernetes-incubator/kube-aws)  Presenter: TBC
-- [tectonic](https://coreos.com/tectonic/) Presenter: TBC
+- [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) Presenter: @marcossantiago
+- [kube-aws](https://github.com/kubernetes-incubator/kube-aws)  Presenter: @mlungwsr
+- [tectonic](https://coreos.com/tectonic/) Presenter: @WesleyCharlesBlake
 
 ## Pre-requisites:
 kubectl needs to be installed
 AWS CLI
 
+---
 # Installing Other Dependencies
 
 ## kubectl
