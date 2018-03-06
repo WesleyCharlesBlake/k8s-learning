@@ -18,7 +18,7 @@ An indepth guide into Kubernetes, and covering topics for the Certified Kubernet
 - [x] Hands On - Cluster -> Deploy Service -> Monitoring
 - [x] K8s Cluster Setup
 
-### Chapter Three
+### [Chapter Three](chapter/three/README.md)
 - [ ] kubectl
 - [ ] Pods 
 - [ ] Services 
