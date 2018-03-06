@@ -41,4 +41,3 @@ Pod is exposed as a primitive in order to facilitate:
 - decoupling of controllers and services — the endpoint controller just watches pods
 - clean composition of Kubelet-level functionality with cluster-level functionality- Kubelet is effectively the “pod controller”
 - high-availability applications, which will expect pods to be replaced in advance- of their termination and certainly in advance of deletion, such as in the case of- planned evictions or image prefetching.
-
