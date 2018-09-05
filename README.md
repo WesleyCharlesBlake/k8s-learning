@@ -11,6 +11,7 @@ An guide into Kubernetes, and covering topics for K8s Cluster Administration
         - [Repos and External resources](#repos-and-external-resources)
         - [Online Training](#online-training)
 
+---
 
 ## Agenda
 
