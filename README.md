@@ -1,73 +1,48 @@
-# Kubernetes Learning
-An indepth guide into Kubernetes, and covering topics for the Certified Kubernetes Administration certification
+# Kubernetes Learning Material
 
-### Learning Out Line
- - What is Kubernetes : purpose, [components](chapter/one/README.md), [architecture](chapter/one/CLUSTER-INFO.md)
- - Kubernetes Cluster Setup Options (Local, KOPS, EKS, COTS etc)
- - CI/CD for applications on Kubernetes (AWS code-suite, third-party tools, etc)
- - Identity and access management (IAM for API authentication, IAM for Pods)
- - Cluster Visibility (metrics, logging, application tracing)
- 
+An guide into Kubernetes, and covering topics for K8s Cluster Administration
+
+- [Kubernetes Learning Material](#kubernetes-learning-material)
+    - [Agenda](#agenda)
+        - [Concepts: Chapter One](#concepts-chapter-one)
+        - [Chapter Two](#chapter-two)
+        - [Chapter Three](#chapter-three)
+    - [Resources](#resources)
+        - [Repos and External resources](#repos-and-external-resources)
+        - [Online Training](#online-training)
+
+
 ## Agenda
 
-### [Chapter One](chapter/one/README.md)
-- [x] Kubernetes and CKA overview
+### [Concepts: Chapter One](chapter/one/README.md)
+
+1. Kubernetes overview
 
 ### [Chapter Two](chapter/two/README.md)
 
-- [x] Hands On - Cluster -> Deploy Service -> Monitoring
-- [x] K8s Cluster Setup
+1. Hands On - Cluster -> Deploy Service -> Monitoring
+1. K8s Cluster Setup
 
 ### [Chapter Three](chapter/three/README.md)
-- [ ] kubectl
-- [ ] Pods 
-- [ ] Services 
-- [ ] Deployments 
-- [ ] ReplicaSets 
-- [ ] DaemonSets 
-- [ ] NameSpaces
 
-### Chapter Four
-- [ ] Ingress Controller 
-- [ ] Networking D
-- [ ] DNS
-- [ ] Service Mesh
+1. kubectl
+1. Pods 
+1. Services 
+1. Deployments 
+1. ReplicaSets 
+1. DaemonSets 
+1. NameSpaces
 
-### Chapter Five
-- [ ] Service Discovery
-- [ ] DNS
-- [ ] [etcd](chapter/five/ETCD-FOR-K8s.md)
+---
 
-### Chapter Six
-- [ ] Monitoring 
-- [ ] Promethues 
-- [ ] Heapster 
-- [ ] cAdvisor
+## Resources
 
-### Chapter Seven
-- [ ] Security 
-- [ ] RBAC 
-- [ ] TLS 
-- [ ] Name Spaces
+### Repos and External resources
 
-### Chapter Eight
-- [ ] CI/CD
+1. [K8s Demo project](https://github.com/WesleyCharlesBlake/k8s-demo)
 
-### Chapter Nine
-- [ ] Cluster Federation (Massive Cluster setup)
-- [ ] Architectural overview
-- [ ] Best practices
-- [ ] Real life scenarios
+### Online Training
 
-
-# Resources
-
-## Repos and External resources
-[CKA Cirriculum](https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrator_exam_v1.9.0.pdf)
-
-[K8s Demo project](https://github.com/WesleyCharlesBlake/k8s-demo)
-
-## Qwik Labs
-I strongly suggest you go through the [QwikLabs Quest](https://qwiklabs.com/quests/29) on K8s.
-
-
+1. [AWS Labs Walkthrough](https://github.com/aws-samples/aws-workshop-for-kubernetes)
+1. [QwikLabs Quest on K8s](https://qwiklabs.com/quests/29)
+1. [Linux Academy](https://linuxacademy.com/containers/training/course/name/certified-kubernetes-administrator-preparation-course)

@@ -1,6 +1,7 @@
 # Hands On Training
 
 ## Objectives
+
 -  Setup and bootstrap K8s cluster (1 master, 2 nodes, 1 ectd)
 -  Deploy a [demo](https://github.com/WesleyCharlesBlake/k8s-demo) (eg nginx)
 
@@ -8,11 +9,6 @@
 
 [Deploying K8s](https://kubernetes.io/docs/setup/pick-right-solution/#local-machine-solutions)
 
-
-What we will cover:
-- [kops](KOPS-AWS.md) Presenter: @WesleyCharlesBlake
-- [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) Presenter: @marcossantiago
-- [kube-aws](https://github.com/kubernetes-incubator/kube-aws)  Presenter: @mlungwsr
 
 ## Pre-requisites:
 kubectl needs to be installed

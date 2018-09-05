@@ -1,5 +1,14 @@
 # Kubernetes Concepts
-    
+
+- [Kubernetes Concepts](#kubernetes-concepts)
+    - [TL;DR](#tldr)
+    - [Kubernetes Objects](#kubernetes-objects)
+        - [The basic Kubernetes objects include:](#the-basic-kubernetes-objects-include)
+    - [Kubernetes Control Plane](#kubernetes-control-plane)
+        - [Kubernetes Master](#kubernetes-master)
+        - [Kubernetes Nodes](#kubernetes-nodes)
+
+## TL;DR
 The Kubernetes Master is a collection of three processes that run on a single node in your cluster, which is designated as the master node. Those processes are: 
 - [kube-apiserver](https://kubernetes.io/docs/reference/generated/kube-apiserver/) 
 - [kube-controller-manager](https://kubernetes.io/docs/reference/generated/kube-controller-manager/)

@@ -1,4 +1,13 @@
-# Services
+- [Headless services](#headless-services)
+  - [With selectors](#with-selectors)
+  - [Without selectors](#without-selectors)
+- [Publishing services - service types](#publishing-services---service-types)
+    - [NodePort](#nodeport)
+    - [LoadBalancer](#loadbalancer)
+    - [Internal load balancer](#internal-load-balancer)
+
+
+## Services
 
 Kubernetes Pods are mortal. They are born and when they die, they are not resurrected. ReplicationControllers in particular create and destroy Pods dynamically (e.g. when scaling up or down or when doing rolling updates). While each Pod gets its own IP address, even those IP addresses cannot be relied upon to be stable over time. This leads to a problem: if some set of Pods (let’s call them backends) provides functionality to other Pods (let’s call them frontends) inside the Kubernetes cluster, how do those frontends find out and keep track of which backends are in that set?
 
@@ -6,9 +15,10 @@ Enter `Services`.
 
 > A Kubernetes Service is an abstraction which defines a logical set of Pods and a policy by which to access them - sometimes called a micro-service. The set of Pods targeted by a Service is (usually) determined by a Label Selector (see below for why you might want a Service without a selector).
 
-# Defining a service
+## Defining a service
 
 A Service in Kubernetes is a REST object, similar to a Pod. Like all of the REST objects, a Service definition can be POSTed to the apiserver to create a new instance. For example, suppose you have a set of Pods that each expose port 9376 and carry a label "app=MyApp".
+
 ```yml
 kind: Service
 apiVersion: v1
@@ -22,6 +32,7 @@ spec:
     port: 80
     targetPort: 9376
 ```
+
 This specification will create a new Service object named “my-service” which targets TCP port 9376 on any Pod with the "app=MyApp" label. This Service will also be assigned an IP address (sometimes called the “cluster IP”), which is used by the service proxies (see below). The Service’s selector will be evaluated continuously and the results will be POSTed to an Endpoints object also named “my-service”.
 
 The Service’s selector will be evaluated continuously and the results will be POSTed to an Endpoints object also named “my-service”
@@ -37,6 +48,7 @@ Services generally abstract access to Kubernetes Pods, but they can also abstrac
 - You are migrating your workload to Kubernetes and some of your backends run outside of Kubernetes.
 
 In any of these scenarios you can define a service without a selector:
+
 ```yaml
 kind: Service
 apiVersion: v1
@@ -50,6 +62,7 @@ spec:
 ```
 
 Because this service has no selector, the corresponding Endpoints object will not be created. You can manually map the service to your own specific endpoints:
+
 ```yaml
 kind: Endpoints
 apiVersion: v1
@@ -61,11 +74,13 @@ subsets:
     ports:
       - port: 9376
 ```
+
 NOTE: Endpoint IPs may not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast (224.0.0.0/24).
 
 Accessing a Service without a selector works the same as if it had a selector. The traffic will be routed to endpoints defined by the user (1.2.3.4:9376 in this example).
 
 An ExternalName service is a special case of service that does not have selectors. It does not define any ports or Endpoints. Rather, it serves as a way to return an alias to an external service residing outside the cluster.
+
 ```yaml
 kind: Service
 apiVersion: v1
@@ -76,9 +91,10 @@ spec:
   type: ExternalName
   externalName: my.database.example.com
 ```
+
 When looking up the host my-service.prod.svc.CLUSTER, the cluster DNS service will return a CNAME record with the value my.database.example.com. Accessing such a service works in the same way as others, with the only difference that the redirection happens at the DNS level and no proxying or forwarding occurs. Should you later decide to move your database into your cluster, you can start its pods, add appropriate selectors or endpoints and change the service type
 
-# Virtual IPs and service proxies
+## Virtual IPs and service proxies
 
 Every node in a Kubernetes cluster runs a `kube-proxy`. `kube-proxy` is responsible for implementing a form of virtual IP for Services of type other than `ExternalName`. In Kubernetes v1.0, Services are a “layer 4” (TCP/UDP over IP) construct, the proxy was purely in userspace. In Kubernetes v1.1, the Ingress API was added (beta) to represent “layer 7”(HTTP) services, iptables proxy was added too, and become the default operating mode since Kubernetes v1.2. In Kubernetes v1.8.0-beta.0, ipvs proxy was added.
 
@@ -105,7 +121,7 @@ Similar to iptables, Ipvs is based on netfilter hook function, but uses hash tab
 - `se`d: shortest expected delay
 - `nq`: never queue
 
-# Multi-Port Services
+## Multi-Port Services
 
 Many Services need to expose more than one port. For this case, Kubernetes supports multiple port definitions on a Service object. When using multiple ports you must give all of your ports names, so that endpoints can be disambiguated. For example:
 ```yaml
@@ -127,7 +143,7 @@ spec:
     targetPort: 9377
 ```
 
-# Headless services
+## Headless services
 
 Sometimes you don’t need or want load-balancing and a single service IP. In this case, you can create “headless” services by specifying "`None`" for the cluster IP (`spec.clusterIP`).
 
@@ -146,17 +162,20 @@ For headless services that do not define selectors, the endpoints controller doe
     CNAME records for ExternalName-type services.
     A records for any Endpoints that share a name with the service, for all other types
 
-# Publishing services - service types
+---
+
+## Publishing services - service types
 
 For some parts of your application (e.g. frontends) you may want to expose a `Service` onto an external (outside of your cluster) IP address.
 
 Kubernetes ServiceTypes allow you to specify what kind of service you want. The default is ClusterIP.
 
 Type values and their behaviors are:
+
 - `ClusterIP`: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType.
-- NodePort: Exposes the service on each Node’s IP at a static port (the NodePort). A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
-- LoadBalancer: Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
-- ExternalName: Maps the service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record with its value. No proxying of any kind is set up. This requires version 1.7 or higher of kube-dns.
+- `NodePort`: Exposes the service on each Node’s IP at a static port (the NodePort). A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
+- `LoadBalancer`: Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
+- `ExternalName`: Maps the service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record with its value. No proxying of any kind is set up. This requires version 1.7 or higher of kube-dns.
 
 ### NodePort
 
