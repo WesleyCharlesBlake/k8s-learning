@@ -214,4 +214,4 @@ A single Kubernetes cluster may span multiple availability zones.
 However, for the highest availability, we recommend using [cluster federation](../multicluster/federation.md).
 
 
-[Next Topic: Concepts](CONCEPTS)
+[Next Topic: Concepts](CONCEPTS.md)
