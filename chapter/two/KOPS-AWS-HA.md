@@ -94,3 +94,6 @@ zones. This can be done by specifying the  flags:
      --master-zones=$MASTER_ZONE
      --zones=$NODE_ZONES
 ```
+
+
+[Next Topic: Concepts pt 2](../three/README.md)

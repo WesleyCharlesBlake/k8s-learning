@@ -43,3 +43,5 @@ wget -O kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
+
+[Next Topic: Deploying](KOPS-AWS-HA.md)
